@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class V1ResponseVO {
 
-    @JsonProperty(value = "String", index = 1)
+    @JsonProperty(value = "Name", index = 1)
     private String string;
 
     @JsonProperty(value = "Now", index = 2)

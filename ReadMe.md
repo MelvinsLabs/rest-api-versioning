@@ -5,7 +5,7 @@ This Project demonstrates various ways to version the REST API.
 
 ## Strategies
 
-1. URL Based Version
+**1. URL Based Version**
 
  In this approach, the version is mentioned in the URL and thus the endpoint.
  
@@ -14,16 +14,14 @@ This Project demonstrates various ways to version the REST API.
  `http://localhost:8181/Api/Op/v1`
  
  `http://localhost:8181/Api/Op/v2`
- 
- _Pros_
- 
- - Browser friendly.
- 
+
  _Cons_
  
- - The endpoint changes.
+ - The endpoint changes, which makes it not suitable for User based APIs.
+ - Major/Minor combined Version Implementation at Controller is not possible, as it is versioned based on resource path.
 
-2. Header Based Version
+
+**2. Header Based Version**
 
  In this approach, the version is passed in the Header of the Request. Thus the endpoint always remains the same.
  
@@ -33,9 +31,14 @@ This Project demonstrates various ways to version the REST API.
  
  `http://localhost:8181/Api/Op` with ApiVersion: 2 in the Header.
 
-3. Vendor MIME Type Version
+ _Cons_
 
- In this approach, the version is passed along as *Accept* parameter in the Request Header.
+ - Major/Minor combined Version Implementation at Controller is not possible, as it is versioned based on single Header.
+ - Not suitable for varying API Contracts across multiple versions.
+
+**3. Vendor MIME Type Version**
+
+ In this approach, the version is passed along as _Accept_ parameter in the Request Header.
  
  Example:
  
@@ -43,3 +46,6 @@ This Project demonstrates various ways to version the REST API.
  
  `http://localhost:8181/Api/Op` with Accept: application/vnd.melvins.v2+json
 
+ _Cons_
+
+ - Not suitable for varying API Contracts across multiple versions, but can be done.

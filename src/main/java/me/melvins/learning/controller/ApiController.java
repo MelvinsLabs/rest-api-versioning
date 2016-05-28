@@ -69,7 +69,7 @@ public class ApiController {
      * @return {@code V1ResponseVO} wrapped as a {@link ResponseEntity}
      */
     @ApiOperation(value = "OpUsingHeaderV1", produces = "application/json")
-    @RequestMapping(value = "Op", method = RequestMethod.GET, headers = "ApiVersion=1")
+    @RequestMapping(value = "Op", method = RequestMethod.GET, headers = "ApiVersion=1.0")
     public ResponseEntity<V1ResponseVO> opUsingHeadersV1(@RequestHeader Map<String, Object> headers) {
 
         LOGGER.debug("Inside API Op v1. Headers {0}", headers);
@@ -86,7 +86,7 @@ public class ApiController {
      * @return {@code V1ResponseVO} wrapped as a {@link ResponseEntity}
      */
     @ApiOperation(value = "OpUsingHeaderV2", produces = "application/json")
-    @RequestMapping(value = "Op", method = RequestMethod.GET, headers = "ApiVersion=2")
+    @RequestMapping(value = "Op", method = RequestMethod.GET, headers = "ApiVersion=2.0, ApiVersion=2.1")
     public ResponseEntity<V2ResponseVO> opUsingHeadersV2(@RequestHeader Map<String, Object> headers) {
 
         LOGGER.debug("Inside API Op v2. Headers {0}", headers);

@@ -14,7 +14,7 @@ import java.util.Date;
  */
 public class V2ResponseVO {
 
-    @JsonProperty(value = "String", index = 1)
+    @JsonProperty(value = "Name", index = 1)
     private Integer string;
 
     @JsonProperty(value = "Now", index = 2)
