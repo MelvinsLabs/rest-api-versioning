@@ -1,4 +1,6 @@
 
+[![Dependency Status](https://www.versioneye.com/user/projects/575e32707757a00041b3b916/badge.svg?style=flat)](https://www.versioneye.com/user/projects/575e32707757a00041b3b916)
+
 # ReadMe
 
 This Project demonstrates various ways to version the REST API.

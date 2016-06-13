@@ -3,3 +3,4 @@
 *.iml
 # Application Binary
 *target/
+*.log
